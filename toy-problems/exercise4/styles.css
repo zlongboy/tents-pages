@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.container {
+    display: grid;
+    margin: 20px;
+}
+.interior {
+    height: 100px; 
+    width: 100px;
+    border: 5px solid white;
+}
+.div1 {
+    background-color: red;
+    position: relative;
+}
+.div2 {
+    background-color: orange;
+    position: relative;
+    top: -50px;
+    left: 50px;
+    z-index: 1;
+}
+.div3 {
+    background-color: yellow;
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    z-index: 2;
+}
+.div4 {
+    background-color: blue;
+    position: absolute;
+    top: 170px;
+    left: 170px;
+    z-index: 3;
+}
+.div5 {
+    background-color: violet;
+    position: absolute;
+    top: 220px;
+    left: 220px;
+    z-index: 4;
+}
