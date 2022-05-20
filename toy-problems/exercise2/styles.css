@@ -28,14 +28,3 @@
     background-color: red;
     transform: rotate(45deg);
 }
-.interior:last-child::after {
-    content:'★';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 36px;
-    width: 36px;
-    border-radius: 50%;
-    background-color: white;
-    transform: rotate(-45deg);
-}
