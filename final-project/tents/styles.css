@@ -1,11 +1,9 @@
 /* global styles */
-* {
+body {
     box-sizing: border-box;
     border: none;
-    font-family: 'Jost', sans-serif;
-    /* font-family: 'Red Hat Display', sans-serif; */
-}
-body {
+    /* font-family: 'Jost', sans-serif;
+    font-family: 'Red Hat Display', sans-serif; */
     height: 100vh;
     display: grid;
 }
@@ -14,57 +12,39 @@ body {
 /* carousel styles */
 .carousel__container {
     width: 100%;
-    overflow: hidden;
     height: 70vh;
-}
-.carousel {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     position: relative;
-    width: 100%;
-    height: 100%;
-    /* max-width: ; */
-    display: flex;
 }
 .carousel__slide {
-    width: 100%;
+    grid: 1 / -1;
     position: absolute;
 }
 .carousel__img {
     width: 100%;
-    object-fit: scale-down;
+    /* object-fit: scale-down; */
 }
-.carousel__elements {
-    width: 100%;
-    height: 100%;
+.carousel__header {
+    grid-area: 2 / 1 / 4 / 2;
+    color: white;
     z-index: 1;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
-.carousel__elements h1 {
-    color: white;
-    font-size: 4rem;
-    line-height: 3.5rem;
-    font-weight: 400;
-}
-/* .first__title {
-    font-weight: ;
-} */
-.carousel__elements h2 {
-    color: white;
-    font-size: 2rem;
-    font-weight: 300;
+.slider-btn__container {
+    display: flex;
 }
 .carousel__btn {
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    border: none;
-    margin: 0.5rem;
     opacity: 70%;
     cursor: pointer;
-    position: absolute;
-    bottom: 1%;
     display: flex;
     place-items: center;
-
 }
 .carousel__btn:hover {
     opacity: 80%;
@@ -77,13 +57,7 @@ body {
     height: 20px;
     opacity: 70%;
 }
-.carousel__btn--next {
-    right: 45%;
-}
-.carousel__btn--prev {
-    left: 45%;
-}
-.carousel__cta {
+.header__cta {
     width: 14%;
     height: 6%;
     cursor: pointer;
@@ -91,9 +65,6 @@ body {
     color: white;
     outline: 3px solid white;
     background-color: transparent;
-    position: absolute;
-    left: 43%;
-    top: 40%;
 }
 .carousel__cta:hover {
     transform: scale(1.03);
