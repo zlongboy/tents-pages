@@ -1,23 +1,27 @@
+/* global styles */
 * {
     box-sizing: border-box;
+    border: none;
+    font-family: 'Jost', sans-serif;
+    /* font-family: 'Red Hat Display', sans-serif; */
 }
-/* h1 {
-    color: white;
-} */
 body {
     height: 100vh;
     display: grid;
 }
+
+/* homepage styles */
+/* carousel styles */
 .carousel__container {
     width: 100%;
     overflow: hidden;
-    height: 75vh;
+    height: 70vh;
 }
 .carousel {
     position: relative;
     width: 100%;
     height: 100%;
-    /* max-width: 800px; */
+    /* max-width: ; */
     display: flex;
 }
 .carousel__slide {
@@ -26,7 +30,27 @@ body {
 }
 .carousel__img {
     width: 100%;
-    /* object-fit: none; */
+    object-fit: scale-down;
+}
+.carousel__elements {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+}
+.carousel__elements h1 {
+    color: white;
+    font-size: 4rem;
+    line-height: 3.5rem;
+    font-weight: 400;
+}
+/* .first__title {
+    font-weight: ;
+} */
+.carousel__elements h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
 }
 .carousel__btn {
     height: 30px;
@@ -34,12 +58,13 @@ body {
     border-radius: 50%;
     border: none;
     margin: 0.5rem;
-    opacity: 50%;
+    opacity: 70%;
     cursor: pointer;
-    place-self: end center;
-    /* ^why isn't this working? Want to center bottom and space between*/
+    position: absolute;
+    bottom: 1%;
     display: flex;
     place-items: center;
+
 }
 .carousel__btn:hover {
     opacity: 80%;
@@ -51,5 +76,28 @@ body {
 .arrow__icon {
     height: 20px;
     opacity: 70%;
-    z-index: 1;
+}
+.carousel__btn--next {
+    right: 45%;
+}
+.carousel__btn--prev {
+    left: 45%;
+}
+.carousel__cta {
+    width: 14%;
+    height: 6%;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    outline: 3px solid white;
+    background-color: transparent;
+    position: absolute;
+    left: 43%;
+    top: 40%;
+}
+.carousel__cta:hover {
+    transform: scale(1.03);
+}
+.carousel__cta:active {
+    transform: scale(1.10);
 }
