@@ -11,14 +11,24 @@
     </head>
 
     <body>
-        <div class="nav__container">
-            <ul class="nav-main">
-                <h1 class="logo">ABODE</h1>
-                <li class="nav-main__item">SHOP</li>
-                <li class="nav-main__item"><img src="imgs/icons/cart.svg" alt=""></li>
-                <li class="nav-main__item">CONTACT US</li>
-            </ul>
-        </div>
+        <!-- navbar -->
+        <nav class="nav__container">
+            <div class="logo">ABODE</div>
+            <input type="text" class="nav__search" placeholder="Search tents">
+            <a href="#" class="nav__hamburger">
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+            </a>
+            <div class="nav__links">
+                <ul>
+                    <li><a href="#shop">SHOP</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                    <li><a class="icon-link" href="#cart"><img src="imgs/icons/cart.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- carousel -->
         <div class="carousel__container">
             <div class="carousel__slide">
                 <img class="carousel__img" src="/imgs/banner/yellow-forest-night.jpg" alt="">
