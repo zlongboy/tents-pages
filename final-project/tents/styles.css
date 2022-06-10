@@ -92,6 +92,7 @@ body {
     background-color: #222;
     border-radius: 15px;
 }
+
 @media (max-width: 600px) {
     .logo {
         align-self: start;

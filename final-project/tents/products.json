@@ -1,0 +1,84 @@
+{
+    "products": [
+        {
+            "sku": "1",
+            "active": true,
+            "featured": true,
+            "brand": "Kelty",
+            "name": "Rumpus",
+            "image": "",
+            "price": 299.95,
+            "details": {
+                "capacity": 6,
+                "season": "3-season",
+                "weight": 16,
+                "floorArea": 72,
+                "color": "green"
+            },
+            "review": {
+                "score": 4,
+                "highlights": []
+            }
+        },
+        {
+            "sku": "2",
+            "active": true,
+            "featured": true,
+            "brand": "Marmot",
+            "name": "Limestone",
+            "image": "",
+            "price": 389.00,
+            "details": {
+                "capacity": 4,
+                "season": "4-season",
+                "weight": 10,
+                "floorArea": 58,
+                "color": "blue"
+            },
+            "review": {
+                "score": 4,
+                "highlights": []
+            }
+        },
+        {
+            "sku": "3",
+            "active": true,
+            "featured": true,
+            "brand": "The North Face",
+            "name": "Stormbreaker",
+            "image": "",
+            "price": 185.00,
+            "details": {
+                "capacity": 2,
+                "season": "3-season",
+                "weight": 4,
+                "floorArea": 29,
+                "color": "yellow"
+            },
+            "review": {
+                "score": 5,
+                "highlights": []
+            }
+        },
+        {
+            "sku": "4",
+            "active": true,
+            "featured": false,
+            "brand": "Kelty",
+            "name": "Grand Mesa",
+            "image": "",
+            "price": 199.95,
+            "details": {
+                "capacity": 4,
+                "season": "Summer",
+                "weight": 13,
+                "floorArea": 48,
+                "color": "red"
+            },
+            "review": {
+                "score": 3,
+                "highlights": []
+            }
+        }
+    ]    
+}
