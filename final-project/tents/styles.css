@@ -70,6 +70,7 @@ input {
     display: grid;
 }
 
+
 /* homepage styles */
 .section-header {
     grid-column: 1 / -1;
@@ -137,9 +138,11 @@ input {
     display: flex;
     align-items: center;
 }
+.nav__links a {
+    padding-bottom: 5px;
+}
 .nav__links a:not(.icon-link) {
     text-decoration: none;
-    padding-bottom: 5px;
     color: var(--clr-neutral-900);
     font-weight: 300;
 }

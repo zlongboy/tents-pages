@@ -1,6 +1,5 @@
 //Carousel
 (function() {
-    //Get all slides
     const carouselSlides = document.querySelectorAll(".carousel-img__container");
     carouselSlides.forEach(function(carouselSlide, index) {
         carouselSlide.style.transform = `translateX(${index*100}%)`
@@ -45,3 +44,21 @@
         navLinks.classList.toggle('active');
     });
 })();
+
+//Products
+var allProducts;
+
+var getProducts = function(path) {
+    fetch(path, {
+        method:'GET'
+    })
+        .then(res => res.json())
+        .then(data => {
+            allProducts = data;
+            //console.log(allProducts)
+        })
+}
+
+//Sort
+
+//Display
