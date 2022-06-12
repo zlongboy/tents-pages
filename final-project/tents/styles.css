@@ -65,6 +65,10 @@ button {
 input {
     font: inherit;
 }
+.container {
+    margin: 1rem;
+    display: grid;
+}
 
 /* homepage styles */
 .section-header {
@@ -455,3 +459,5 @@ input {
         margin: 1rem;
     }
 }
+
+/* all products styles */

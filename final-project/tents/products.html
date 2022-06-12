@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Search and compare tents to fit every camping need">
+        <title>Compare tents | ABODE</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- navbar -->
+        <nav class="nav__container">
+            <div class="logo">ABODE</div>
+            <a href="#" class="nav__hamburger">
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+                <span class="hamburger__bar"></span>
+            </a>
+            <div class="nav__links">
+                <ul>
+                    <li><a href="#shop">SHOP</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                    <li><a class="icon-link" href="#cart"><img src="imgs/icons/cart-thin.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- all products -->
+        <section class="container">
+            <div class="product-filters__container">
+                <h2 class="section-header">Search & compare</h2>
+                <form id="nav__search-form" class="nav__search" action="#">
+                    <img src="imgs/icons/search-thin_icon.svg" alt="">
+                    <input type="text" id="nav__search-input" placeholder="Search tents">
+                </form>
+            </div>
+            <div>
+                <h2 class="section-header">Search results</h2>
+                <div class="product-card__container">
+                    <!-- placeholder static cards -->
+                    <div class="product-card">
+                        <div class="product-img__container">
+                            <div class="product-featured"><span>Top-rated</span></div>
+                            <img src="/imgs/products/kelty_rumpus.jpeg" alt="">
+                        </div>
+                        <div class="product-title"><b>KELTY </b>Rumpus</div>
+                        <div class="product-summary__container">
+                            <div class="product-summary__price"><b>$</b> 299.95</div>
+                            <div class="product-summary__capacity"><b>CAPACITY</b><br>6-person</div>
+                            <div class="product-summary__rating"><b>REVIEW</b><br><span class="review-stars">4 stars</span></div>
+                            <a class="product-card__btn"><span>SHOP NOW</span></a>
+                        </div>            
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img__container">
+                            <div class="product-featured"><span>Top-rated</span></div>
+                            <img src="/imgs/products/kelty_rumpus.jpeg" alt="">
+                        </div>
+                        <div class="product-title"><b>KELTY </b>Rumpus</div>
+                        <div class="product-summary__container">
+                            <div class="product-summary__price"><b>$</b> 299.95</div>
+                            <div class="product-summary__capacity"><b>CAPACITY</b><br>6-person</div>
+                            <div class="product-summary__rating"><b>REVIEW</b><br><span class="review-stars">4 stars</span></div>
+                            <a class="product-card__btn"><span>SHOP NOW</span></a>
+                        </div>            
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img__container">
+                            <div class="product-featured"><span>Top-rated</span></div>
+                            <img src="/imgs/products/kelty_rumpus.jpeg" alt="">
+                        </div>
+                        <div class="product-title"><b>KELTY </b>Rumpus</div>
+                        <div class="product-summary__container">
+                            <div class="product-summary__price"><b>$</b> 299.95</div>
+                            <div class="product-summary__capacity"><b>CAPACITY</b><br>6-person</div>
+                            <div class="product-summary__rating"><b>REVIEW</b><br><span class="review-stars">4 stars</span></div>
+                            <a class="product-card__btn"><span>SHOP NOW</span></a>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="main.js"></script>
+    </body>
+</html>
