@@ -1,7 +1,7 @@
 //Carousel
 (function() {
     //Get all slides
-    const carouselSlides = document.querySelectorAll(".carousel__slide");
+    const carouselSlides = document.querySelectorAll(".carousel-img__container");
     carouselSlides.forEach(function(carouselSlide, index) {
         carouselSlide.style.transform = `translateX(${index*100}%)`
     })
