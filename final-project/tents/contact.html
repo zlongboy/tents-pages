@@ -2,17 +2,17 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Search and compare tents to fit every camping need">
-        <title>Compare tents | ABODE</title>
+        <meta name="description" content="24/7 customer service available for tent reccomendations or questions on shipping and order status.">
+        <title>Contact Us | ABODE</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
     </head>
 
-    <body class="secondary">
+    <body>
         <!-- navbar -->
-        <nav class="nav__container">
+        <nav class="nav__container nav-secondary">
             <div class="logo">ABODE</div>
             <a href="#" class="nav__hamburger">
                 <span class="hamburger__bar"></span>
@@ -28,11 +28,53 @@
             </div>
         </nav>
 
-        <!-- all products -->
-        <section class="container">
+        <!-- contact form -->
+        <section class="container spacer">
             <div class="contact__container">
                 <h2 class="section-header">Contact Us</h2>
-                <form id="contact-form" class="contact-form" action="#"></form>
+                <p class="contact__subhead">24/7 customer service on hand for tent reccomendations and questions regarding shipping, order status, or payment details</p>
+                    <form id="contact-form" class="form__container" action="#">
+                        <input type="text" name="firstName" placeholder="First name">
+                        <input type="text" name="lastName" placeholder="Last name">
+                        <input type="email" name="email" placeholder="Email">
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone">
+                        <div class="referrer__container">
+                            <h3>How did you hear about us?</h3>
+                            <div class="radio__container">
+                                <input type="radio" id="referrer1" name="contact" value="email">
+                                <label for="referrer1">Conference</label>
+                            
+                                <input type="radio" id="referrer2" name="contact" value="phone">
+                                <label for="referrer2">TV</label>
+                            
+                                <input type="radio" id="referrer3" name="contact" value="mail">
+                                <label for="refferer3">Radio</label>
+
+                                <input type="radio" id="referrer4" name="contact" value="mail">
+                                <label for="refferer4">Online</label>
+
+                                <input type="radio" id="referrer5" name="contact" value="mail">
+                                <label for="refferer5">Word of mouth</label>
+
+                                <input type="radio" id="referrer6" name="contact" value="mail">
+                                <label for="refferer6">Other</label>
+                            </div>
+                        </div>
+                        <textarea type="text" class="comment" name="comment" placeholder="Comment"></textarea>
+                        <button class="section__cta form__cta" type="submit">SUBMIT</button>
+                    </form>
+            </div>
+        </section>
+
+        <!-- about -->
+        <section class="about__container">
+            <h2 class="section-header">About us</h2>
+            <div class="about__body">
+                <div class="about-img__container">
+                    <img src="/imgs/banner/about.jpg" alt="">
+                </div>
+                <div><p>In the summer of 2004, founders Juan Durin and Cam Seits set out to fufill their life-long dream of hiking the Appalachian trail together. Childhood friends from Charlotte, NC, Juan and Cam had since relocated across the country to Bend, OR and Burlington, VT. Hiking the 2,200 mile-trail from Springer Mountain in Georgia to Mount Katahdin in Maine — a journey that often takes more than six months — is no small feat, requiring meticulous planning to complete. Living on separate coasts across the continent made shopping for essential equipment like a tent nearly impossible. It was out of this need — to compare and shop high-quality tents from anywhere — that Abode was born, the first online tent marketplace.</p>
+                </div>
             </div>
         </section>
 
