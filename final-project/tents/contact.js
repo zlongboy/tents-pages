@@ -1,88 +1,84 @@
+//Get form elements
+const form = document.querySelector('#contact-form');
+const firstName = document.querySelector('input[name="firstName"]');
+const lastName = document.querySelector('input[name="lastName"]');
+const email = document.querySelector('input[name="email"]');
+const phone = document.querySelector('input[name="phone"]');
 
-
-
-
-
-//Initialize form elements for form submit functions
-const form = document.querySelector('.form-container')
-const nameInput = document.querySelector('input[name="full-name"]')
-const nameErrorDiv = document.querySelector('#name-error-msg')
-const dateInput = document.querySelector('input[name="post-date"]')
-const dateErrorDiv = document.querySelector('#date-error-msg')
-const commentInput = document.querySelector('textarea[name="post-msg"]')
-const commentErrorDiv = document.querySelector('#comment-error-msg')
+const firstNameError = document.querySelector('#firstName-error-msg');
+const lastNameError = document.querySelector('#lastName-error-msg');
+const emailError = document.querySelector('#email-error-msg');
+const phoneError = document.querySelector('#phone-error-msg');
 
 //Define error messages
 const errorMsg = {
   empty: 'Required.',
   nameInvalid: 'Name must only contain letters and spaces.',
-  dateInvalid: 'Please enter a valid date.',
-  commentInvalid: 'Comments must be 500 characters or less.'
+  emailInvalid: 'Please enter a valid email address.',
+  phoneInvalid: 'Please enter a valid phone number.'
 }
 
-//Apply error styles functions
+//Helper functions
 function applyErrorStyles(input, div, msg) {
   input.classList.add('error-input');
-  div.innerText = msg
+  div.innerText = msg;
 }
 function removeErrorStyles(input, div) {
-  //TODO: loop until (while) and remove errors when match
   input.classList.remove('error-input')
-  div.innerText = ''
+  div.innerText = '';
 }
 
-//Validate name
-function isValidName(nameValue) {
+//Validation functions
+function isValidName(name, input, error) {
   const nameRegex = /^[a-zA-Z\s]*$/
-  if (!nameRegex.test(nameValue)) {
-    applyErrorStyles(nameInput, nameErrorDiv, errorMsg.nameInvalid)
+  if (!nameRegex.test(name)) {
+    applyErrorStyles(input, error, errorMsg.nameInvalid)
   }
-  else if (nameValue.trim().length < 1) {
-    applyErrorStyles(nameInput, nameErrorDiv, errorMsg.empty)
+  else if (name.trim().length < 1) {
+    applyErrorStyles(input, error, errorMsg.empty)
   } 
   else {
-    removeErrorStyles(nameInput, nameErrorDiv)
+    removeErrorStyles(input, error)
     return true
   }
 }
-//Validate date
-function isValidDate(dateValue) { 
-  const dateRegex = /^(0?[1-9]|1[0-2])\/(0?[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/
-  //TODO: Refactor regex to be only dates after current date
-  const convertedDate = moment(dateInput.value).format('MM/DD/YYYY')
-  //TODO: date input does not exist unless full value entered... how can I trigger error message in this case?
-  if (!dateRegex.test(convertedDate)) {
-    applyErrorStyles(dateInput, dateErrorDiv, errorMsg.dateInvalid)
+
+function isValidEmail(email, input, error) {
+    const emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
+    if (!emailRegex.test(email)) {
+      applyErrorStyles(input, error, errorMsg.emailInvalid)
+    }
+    else if (email.trim().length < 1) {
+      applyErrorStyles(input, error, errorMsg.empty)
+    } 
+    else {
+      removeErrorStyles(input, error)
+      return true
+    }
   }
-  else {
-    removeErrorStyles(dateInput, dateErrorDiv)
-    return true
+
+  function isValidPhone(phone, input, error) {
+    const phoneRegex = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
+    if (!phoneRegex.test(phone)) {
+      applyErrorStyles(input, error, errorMsg.phoneInvalid)
+    }
+    else if (phone.trim().length < 1) {
+      applyErrorStyles(input, error, errorMsg.empty)
+    } 
+    else {
+      removeErrorStyles(input, error)
+      return true
+    }
   }
-}
-//Validate comment
-function isValidComment(comment) { 
-  if (comment.length > 500) {
-    applyErrorStyles(commentInput, commentErrorDiv, errorMsg.commentInvalid)
-  }
-  else if (comment.trim().length < 1) {
-    applyErrorStyles(commentInput, commentErrorDiv, errorMsg.empty)
-  } 
-  else {
-    removeErrorStyles(commentInput, commentErrorDiv)
-    return true
-  }
-}
 
 //Run all validation on submit
 form.addEventListener('submit', function(element) {
   element.preventDefault();
-  //TODO: add validation loop here
-  const nameValidation = isValidName(nameInput.value);
-  const dateValidation = isValidDate(dateInput.value);
-  const commentValidation = isValidComment(commentInput.value);
-  if (nameValidation && dateValidation && commentValidation) {
-    createNewPost();
-    //Clears comment input after submit for best user experience
-    commentInput.value = ''
+  const firstNameValidation = isValidName(firstName.value, firstName, firstNameError);
+  const lastNameValidation = isValidName(lastName.value, lastName, lastNameError);
+  const emailValidation = isValidEmail(email.value, email, emailError);
+  const phoneValidation = isValidPhone(phone.value, phone, phoneError)
+  if (lastNameValidation && firstNameValidation && emailValidation && phoneValidation) {
+    //Add submit function here  
   }
 });

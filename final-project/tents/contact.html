@@ -34,10 +34,22 @@
                 <h2 class="section-header">Contact Us</h2>
                 <p class="contact__subhead">24/7 customer service on hand for tent reccomendations and questions regarding shipping, order status, or payment details</p>
                     <form id="contact-form" class="form__container" action="#">
-                        <input type="text" name="firstName" placeholder="First name">
-                        <input type="text" name="lastName" placeholder="Last name">
-                        <input type="email" name="email" placeholder="Email">
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone">
+                        <div class="input__container">
+                            <input type="text" name="firstName" placeholder="First name">
+                            <span class='error-msg' id='firstName-error-msg'></span>   
+                        </div>
+                        <div class="input__container">
+                            <input type="text" name="lastName" placeholder="Last name">
+                            <span class='error-msg' id='lastName-error-msg'></span>  
+                        </div>
+                        <div class="input__container">
+                            <input type="text" name="email" placeholder="Email">
+                            <span class='error-msg' id='email-error-msg'></span>
+                        </div>
+                        <div class="input__container">
+                            <input type="tel" name="phone" placeholder="Phone">
+                            <span class='error-msg' id='phone-error-msg'></span>  
+                        </div>
                         <div class="referrer__container">
                             <h3>How did you hear about us?</h3>
                             <div class="radio__container">
@@ -69,7 +81,7 @@
                             </div>
                         </div>
                         <textarea type="text" class="comment" name="comment" placeholder="Comment"></textarea>
-                        <button class="section__cta form__cta" type="submit">SUBMIT</button>
+                        <button class="section__cta form__cta btn-animate" type="submit">SUBMIT</button>
                     </form>
             </div>
         </section>
@@ -88,5 +100,6 @@
 
         <!-- <script src="main.js"></script> -->
         <!-- TODO: sort out script exports - need nav js on all pages -->
+        <script src="contact.js"></script>
     </body>
 </html>
