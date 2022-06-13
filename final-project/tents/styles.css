@@ -370,6 +370,7 @@ input {
     padding: 0.2rem;
     background-color: var(--clr-primary-200);
     position: absolute;
+    top: 0;
     z-index: 1;
 }
 .product-title {
@@ -464,3 +465,6 @@ input {
 }
 
 /* all products styles */
+.nav-secondary {
+    box-shadow: 1px;
+}
