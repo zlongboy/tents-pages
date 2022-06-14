@@ -31,6 +31,24 @@ p {
 body {
     font-weight: 400;
 }
+article {
+    display: grid;
+    grid-template-rows: auto, 1fr, auto;
+}
+footer {
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-primary-100);
+    margin-top: 3rem;
+}
+footer > * {
+    text-decoration: none;
+    color: var(--clr-neutral-300);
+    margin: 2rem;
+    font-size: 0.8rem;
+}
 
 /* TODO clean up min screen helper here */
 @media (max-width: 359px) {
@@ -74,7 +92,7 @@ input, textarea {
     display: grid;
 }
 .spacer {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 .nav-secondary {
     border-bottom: 3px solid var(--clr-primary-200);
@@ -481,7 +499,7 @@ input, textarea {
     grid-column: 1 / -1;
     margin-top: 2rem;
     width: 100%;
-    min-width: 360px;
+    min-width: 330px;
     justify-self: center;
     display: flex;
     flex-direction: column;
@@ -544,12 +562,6 @@ input, textarea {
     outline: 2px solid var(--clr-neutral-200);
     grid-column: 1 / -1;
     margin-top: 2rem;
-}
-@media (min-width: 700px) {
-    .contact__container {
-        width: 60%;
-        min-width: 560px;
-    }
 }
 /* error styles */
 .error-msg {

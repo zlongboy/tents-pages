@@ -11,38 +11,47 @@
     </head>
 
     <body class="secondary">
-        <!-- navbar -->
-        <nav class="nav__container nav-secondary">
-            <div class="logo">ABODE</div>
-            <a href="#" class="nav__hamburger">
-                <span class="hamburger__bar"></span>
-                <span class="hamburger__bar"></span>
-                <span class="hamburger__bar"></span>
-            </a>
-            <div class="nav__links">
-                <ul>
-                    <li><a href="#shop">SHOP</a></li>
-                    <li><a href="#contact">CONTACT US</a></li>
-                    <li><a class="icon-link" href="#cart"><img src="imgs/icons/cart-thin.svg" alt=""></a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <!-- all products -->
-        <section class="container spacer">
-            <div class="product-filters__container">
-                <h2 class="section-header">Search & compare</h2>
-                <form id="nav__search-form" class="nav__search" action="#">
-                    <img src="imgs/icons/search-thin_icon.svg" alt="">
-                    <input type="text" id="nav__search-input" placeholder="Search tents">
-                </form>
-            </div>
-            <div>
-                <h2 class="section-header">Search results</h2>
-                <div class="product-card__container"></div>
-            </div>
-        </section>
-
+        <article>
+            <header>
+                <!-- navbar -->
+                <nav class="nav__container nav-secondary">
+                    <div class="logo">ABODE</div>
+                    <a href="#" class="nav__hamburger">
+                        <span class="hamburger__bar"></span>
+                        <span class="hamburger__bar"></span>
+                        <span class="hamburger__bar"></span>
+                    </a>
+                    <div class="nav__links">
+                        <ul>
+                            <li><a href="#shop">SHOP</a></li>
+                            <li><a href="#contact">CONTACT US</a></li>
+                            <li><a class="icon-link" href="#cart"><img src="imgs/icons/cart-thin.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <!-- all products -->
+                <section class="container spacer">
+                    <div class="product-filters__container">
+                        <h2 class="section-header">Search & compare</h2>
+                        <form id="nav__search-form" class="nav__search" action="#">
+                            <img src="imgs/icons/search-thin_icon.svg" alt="">
+                            <input type="text" id="nav__search-input" placeholder="Search tents">
+                        </form>
+                    </div>
+                    <div>
+                        <h2 class="section-header">Search results</h2>
+                        <div class="product-card__container"></div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <div>© 2022 ABODE. All Rights Reserved.</div>
+                <a href="#">Terms & Privacy</a>
+            </footer>    
+        </article>
+        
         <!-- <script src="main.js"></script> -->
         <!-- TODO: sort out script exports - need nav js on all pages -->
         <script src="products.js"></script>
