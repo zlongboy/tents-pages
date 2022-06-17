@@ -358,7 +358,8 @@ input, textarea {
     }
 }
 
-/* featured styles */
+
+/* product card styles */
 .featured__container {
     display: grid;
     margin: 1rem;
@@ -367,17 +368,12 @@ input, textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     gap: 2.6rem;
 }
-.product-card__container > * {
-    flex-basis: 100%;
-}
 .product-card {
-    grid-row: span 1;
-    grid-column: span 1;
-    height: 240px;
-    max-width: 380px;
+    max-height: 240px;
+    min-height: 240px;
+    flex-basis: 360px;
     background-color: var(--clr-primary-100);
     position: relative;
 }
@@ -390,6 +386,7 @@ input, textarea {
     text-align: center;
     font-size: 0.7rem;
     height: 10%;
+    max-height: 24px;
     width: 20%;
     max-width: 110px;
     padding: 0.2rem;
@@ -447,7 +444,8 @@ input, textarea {
     }
 }
 
-/* about us styles */
+
+/* about styles */
 .about__container {
     margin: 1rem;
     display: grid;
@@ -489,6 +487,7 @@ input, textarea {
     }
 }
 
+
 /* products styles */
 #products__search-form {
     justify-self: center;
@@ -527,8 +526,46 @@ input, textarea {
 .checklist select {
     margin-top: 0.3125rem;
 }
-
-/* sandbox dropdown */
+.filters__header img {
+    display: none;
+}
+@media (max-width: 500px) {
+    .results__container {
+        flex-direction: column;
+        margin: 1rem;
+    }
+    .filters__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: flex-start;
+        margin-bottom: 1.6rem;
+    }
+    .filters__container > * {
+        margin: 0;
+        padding: 0;
+    }
+    .filters__header img {
+        display: inline;
+        max-width: 24px;
+        margin-left: 0.5rem;
+    }
+    .filters__header h3 {
+        display: flex;
+        cursor: pointer;
+    }
+    .checklist__container {
+        grid-column: 1 / -1;
+        display: flex;
+        gap: 1.6rem;
+        margin-bottom: 2rem;
+    }
+    .hide {
+        display: none;
+    }
+    .sort-by__container {
+        margin-left: 1rem;
+    }
+}
 
 
 /* contact styles */
@@ -594,7 +631,6 @@ input, textarea {
     padding: 0.5rem;
 }
 .form__cta {
-    /* color: var(--clr-neutral-300); */
     background-color: var(--clr-primary-200);
     outline: 1px solid var(--clr-neutral-200);
     color: var(--clr-neutral-300);

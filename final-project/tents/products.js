@@ -1,4 +1,4 @@
-//***** PRODUCTS *****
+//***** PRODUCTS *****//
 const productsURL = '/products.json';
 
 var getProducts = function(path) { 
@@ -14,14 +14,14 @@ var getProducts = function(path) {
 };
 
 
-//***** SORT *****
+//***** SORT *****//
 //input: raw products
 //listen for input changes (add listeners for every filter): filter based on inputs, if not return default sorting 
            //use some(array.property) method
 //output: filteredProducts
 
 
-//***** DISPLAY *****
+//***** DISPLAY *****//
 
 //Helper functions
 var titleInner = function(obj) {
@@ -65,7 +65,7 @@ function displayProducts(filteredProducts) {
     });
 }
 
-//***** RUN ALL *****
+//***** RUN ALL *****//
 getProducts(productsURL).then(function(allProducts) {
     //FINAL: displayProducts(sortProducts(allProducts))
      displayProducts(allProducts); 
