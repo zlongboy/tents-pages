@@ -46,19 +46,4 @@
 })();
 
 //Products
-var allProducts;
-
-var getProducts = function(path) {
-    fetch(path, {
-        method:'GET'
-    })
-        .then(res => res.json())
-        .then(data => {
-            allProducts = data;
-            //console.log(allProducts)
-        })
-}
-
-//Sort
-
-//Display
+//Export functions from products.js to get featured products

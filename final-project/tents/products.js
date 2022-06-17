@@ -70,3 +70,14 @@ getProducts(productsURL).then(function(allProducts) {
     //FINAL: displayProducts(sortProducts(allProducts))
      displayProducts(allProducts); 
  });
+
+
+//***** MOBILE FILTERS *****//
+(function() {
+    const filtersOpen = document.querySelector('.filters__header');
+    const checklist = document.querySelector('.checklist__container');
+
+    filtersOpen.addEventListener('click', function() {
+        checklist.classList.toggle('hide');
+    });
+})();
