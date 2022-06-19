@@ -232,6 +232,7 @@ input, textarea {
 .carousel__container {
     width: 100%;
     height: 70vh;
+    min-height: 600px;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -262,7 +263,7 @@ input, textarea {
     grid-column: 1 / -1;
     grid-row: 1 / 4;
     align-self: start;
-    margin-top: 4.8rem;
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -295,7 +296,7 @@ input, textarea {
     grid-row: 5 / 6;
     grid-column: 3 / 4;
     align-self: end;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     z-index: 2;
@@ -340,7 +341,7 @@ input, textarea {
         grid-column: 1 / -1;
     }
     .header__container {
-        margin-top: 4rem;
+        margin-top: 6rem;
     }
     .header__title span {
         font-size: 2.3rem;
@@ -571,7 +572,7 @@ input, textarea {
 /* contact styles */
 .contact__container {
     grid-column: 1 / -1;
-    margin-top: 2rem;
+    margin: 0 0 2rem 0;
     width: 100%;
     min-width: 330px;
     justify-self: center;
