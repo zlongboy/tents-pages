@@ -36,7 +36,7 @@ var summaryInner = function(obj) {
     return `<div class="product-summary__price"><b>$ </b>${obj.price}</div>
             <div class="product-summary__capacity"><b>CAPACITY</b><br>${obj.capacity}-person</div>
             <div class="product-summary__rating"><b>REVIEW</b><br><span class="review-stars">${obj.score} stars</span></div>
-            <a class="product-card__btn"><span>SHOP NOW</span></a>`
+            <a href="${obj.url}"class="product-card__btn"><span>SHOP NOW</span></a>`
 }
 
 function displayElement(name, type, parent, inner, ...classes) {
