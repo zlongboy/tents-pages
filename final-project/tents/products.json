@@ -8,7 +8,7 @@
             "name": "Rumpus",
             "image": "/imgs/products/kelty_rumpus.jpeg",
             "image2": "/imgs/products/kelty_rumpus_02.jpg",
-            "image3": "",
+            "image3": "/imgs/products/kelty_rumpus_03.jpeg",
             "url": "/kelty-rumpus.html",
             "price": 299.95,
             "capacity": 6,
@@ -17,7 +17,12 @@
             "floorArea": 72,
             "color": "Blue",
             "score": 4,
-            "highlights": []
+            "highlights": [
+                "Spacious interior perfectly suited for family camping, festival festivities, or backyard getaways",
+                "Vestibule door converts to extra large shade awning for additional external, covered storage",
+                "Kelty is synonymous with quality in the outdoor community. Designed in Colorado, Kelty gear is built to last"
+            ],
+            "keywords": ["family camping", "extra large", "6-person"]
         },
         {
             "sku": "2",
@@ -36,7 +41,8 @@
             "floorArea": 58,
             "color": "Orange",           
             "score": 4,
-            "highlights": []
+            "highlights": [],
+            "keywords": []
         },
         {
             "sku": "3",
@@ -55,7 +61,8 @@
             "floorArea": 29,
             "color": "Yellow",
             "score": 5,
-            "highlights": []
+            "highlights": [],
+            "keywords": []
         },
         {
             "sku": "4",
@@ -74,7 +81,8 @@
             "floorArea": 48,
             "color": "Grey",
             "score": 3,
-            "highlights": []
+            "highlights": [],
+            "keywords": []
         },
         {
             "sku": "99",
@@ -93,7 +101,8 @@
             "floorArea": 72,
             "color": "Blue",
             "score": 4,
-            "highlights": []
+            "highlights": [],
+            "keywords": []
         },
         {
             "sku": "2",
@@ -112,7 +121,8 @@
             "floorArea": 58,
             "color": "Orange",           
             "score": 4,
-            "highlights": []
+            "highlights": [],
+            "keywords": []
         },
         {
             "sku": "3",
@@ -131,7 +141,8 @@
             "floorArea": 29,
             "color": "Blue",
             "score": 5,
-            "highlights": []
+            "highlights": [],
+            "keywords": []
         },
         {
             "sku": "4",
@@ -150,7 +161,8 @@
             "floorArea": 48,
             "color": "Grey",
             "score": 3,
-            "highlights": []
+            "highlights": [],
+            "keywords": []
         },
         {
             "sku": "98",
@@ -169,7 +181,8 @@
             "floorArea": 72,
             "color": "Blue",
             "score": 4,
-            "highlights": []
+            "highlights": [],
+            "keywords": []
         }
     ]    
 }
