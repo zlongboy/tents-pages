@@ -34,16 +34,27 @@ var imgInner = function(obj) {
 
 var summaryInner = function(obj) {
     return `<div class="product-summary__price"><b>$ </b>${obj.price}</div>
-            <div class="product-summary__capacity"><b>CAPACITY</b><br>${obj.capacity}-person</div>
-            <div class="product-summary__rating"><b>REVIEW</b><br><span class="review-stars">${obj.score} stars</span></div>
+            <div class="product-summary__capacity"><b>CAPACITY</b><div>${obj.capacity}-person</div></div>
+            <div class="product-summary__rating"><b>REVIEW</b><div class="review-stars">${obj.score} stars</div></div>
             <a href="${obj.url}"class="product-card__btn"><span>SHOP NOW</span></a>`
 }
 
 function displayElement(name, type, parent, inner, ...classes) {
+    // classes = classes || 0;
     name = document.createElement(type);
+    // if (classes !== 0) {
+    //     name.classList.add(classes)
+    // }
+    //HOW TO: Make parameters optional?
     name.classList.add(classes);
     name.innerHTML = inner;
     parent.appendChild(name);
+}
+
+function displayTotal(arr) {
+    const container = document.querySelector('.results-showing');
+    const total = arr.length;
+    displayElement('totalResults', 'span', container, `showing: ${total} results`, 'GET-RID-OF-THIS'); 
 }
 
 function displayProducts(filteredProducts) {
@@ -63,12 +74,14 @@ function displayProducts(filteredProducts) {
         fragment.appendChild(card);
         container.appendChild(fragment)
     });
+
+    displayTotal(filteredProducts);
 }
 
 //***** RUN ALL *****//
 getProducts(productsURL).then(function(allProducts) {
     //FINAL: displayProducts(sortProducts(allProducts))
-     displayProducts(allProducts); 
+    displayProducts(allProducts);
  });
 
 

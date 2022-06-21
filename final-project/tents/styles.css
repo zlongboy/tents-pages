@@ -421,6 +421,9 @@ input, textarea {
 }
 .product-summary__capacity, .product-summary__rating {
     font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .product-card__btn {
     width: 5.5rem;
