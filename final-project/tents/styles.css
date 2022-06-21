@@ -101,6 +101,9 @@ input, textarea {
 .nav-secondary {
     border-bottom: 3px solid var(--clr-primary-200);
 }
+.nav-secondary div:last-child {
+    grid-column-end: -1;
+}
 .section-header {
     grid-column: 1 / -1;
     justify-self: center;
@@ -640,6 +643,7 @@ input, textarea {
     outline: 1px solid var(--clr-neutral-200);
     color: var(--clr-neutral-300);
     grid-column: 1 / -1;
+    justify-self: center;
     margin-top: 2rem;
 }
 /* error styles */
@@ -666,7 +670,7 @@ grid-template-columns: 3fr 2fr;
 grid-template-rows: repeat(2, auto);
 }
 .pdp-back__btn {
-margin: 1rem 1rem 1rem 0;
+margin: 0 1rem 1rem 0;
 display: flex;
 align-items: center;
 }
@@ -717,6 +721,7 @@ grid-template-rows: 4fr 1fr;
     height: 16px;
     width: 16px;
     margin: 0 0.1rem;
+    opacity: 80%;
 }
 .pdp-keywords, .pdp-highlights li {
     font-size: 0.88rem;
@@ -781,5 +786,4 @@ grid-template-rows: 4fr 1fr;
         grid-row: 1 / -1;
         margin: 3rem;
     }
-
 }
