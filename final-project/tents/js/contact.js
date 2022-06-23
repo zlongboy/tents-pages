@@ -71,7 +71,7 @@ function isValidEmail(email, input, error) {
     }
   }
 
-//Run all validation on submit
+//Run all validation functions on submit
 form.addEventListener('submit', function(element) {
   element.preventDefault();
   const firstNameValidation = isValidName(firstName.value, firstName, firstNameError);
@@ -79,6 +79,6 @@ form.addEventListener('submit', function(element) {
   const emailValidation = isValidEmail(email.value, email, emailError);
   const phoneValidation = isValidPhone(phone.value, phone, phoneError)
   if (lastNameValidation && firstNameValidation && emailValidation && phoneValidation) {
-    //Add submit function here  
+  //Add submit function here if necessary
   }
 });

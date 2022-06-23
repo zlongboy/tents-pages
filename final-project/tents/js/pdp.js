@@ -1,4 +1,5 @@
 //Carousel
+//TODO import carousel code - below is repeated code!
 (function() {
     const carouselSlides = document.querySelectorAll(".carousel-img__container");
     carouselSlides.forEach(function(carouselSlide, index) {

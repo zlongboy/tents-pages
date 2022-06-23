@@ -98,12 +98,6 @@ input, textarea {
     margin: 1rem;
     display: grid;
 }
-.nav-secondary {
-    border-bottom: 3px solid var(--clr-primary-200);
-}
-.nav-secondary div:last-child {
-    grid-column-end: -1;
-}
 .section-header {
     grid-column: 1 / -1;
     justify-self: center;
@@ -198,6 +192,12 @@ input, textarea {
     background-color: var(--clr-neutral-900);
     border-radius: 15px;
 }
+.nav-secondary {
+    border-bottom: 3px solid var(--clr-primary-200);
+}
+.nav-secondary div:last-child {
+    grid-column-end: -1;
+}
 @media (max-width: 700px) {
     .logo {
         align-self: start;
@@ -221,7 +221,6 @@ input, textarea {
         margin-left: 0.5rem;
         justify-self: center;
         display: flex;
-
     }
     .nav__container {
         grid-template-rows: repeat(2, auto);
@@ -232,6 +231,9 @@ input, textarea {
     }
     .nav__links li {
         padding: 0.2rem;
+    }
+    .nav-secondary div:last-child {
+        grid-column: 1 / -1;
     }
 }
 

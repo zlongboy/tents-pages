@@ -35,15 +35,5 @@
     });
 })();
 
-//Nav
-(function() {
-    const hamburgerNav = document.querySelector('.nav__hamburger');
-    const navLinks = document.querySelector('.nav__links');
-
-    hamburgerNav.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-    });
-})();
-
 //Products
-//Export functions from products.js to get featured products
+//TODO fitler to only top 3 highest rated before running display products?
