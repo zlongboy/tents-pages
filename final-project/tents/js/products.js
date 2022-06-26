@@ -3,7 +3,7 @@ const productsClient = {
     path: './products.json'
 }
 
-var getProducts = async function(path) { 
+const getProducts = async function(path) { 
     try {
         const response = await fetch(path);
         const json = await response.json();
@@ -32,15 +32,15 @@ var getProducts = async function(path) {
 
 
 //***** DISPLAY *****//
-var titleInner = function(obj) {
+let titleInner = function(obj) {
     return `<b>${obj.brand} </b>${obj.name}`
 }
 
-var imgInner = function(obj) {
+let imgInner = function(obj) {
     return `<img src="${obj.image}">`
 }
 
-var summaryInner = function(obj) {
+let summaryInner = function(obj) {
     return `<div class="product-summary__price"><b>$ </b>${obj.price}</div>
             <div class="product-summary__capacity"><b>CAPACITY</b><div>${obj.capacity}-person</div></div>
             <div class="product-summary__rating"><b>REVIEW</b><div class="review-stars">${obj.score} stars</div></div>
@@ -87,6 +87,7 @@ function displayProducts(filteredProducts) {
 //***** RUN ALL *****//
 getProducts(productsClient.path).then(function(allProducts) {
     //FINAL: displayProducts(sortProducts(allProducts))
+    console.log(allProducts);
     displayProducts(allProducts);
     displayTotal(allProducts);
 });
