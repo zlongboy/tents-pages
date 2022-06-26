@@ -3,16 +3,17 @@ const productsClient = {
     path: './products.json'
 }
 
-var getProducts = function(path) { 
-    return fetch(path)   
-    .then(response => response.json())
-    .then(function(json) {
-        allProducts = []
+var getProducts = async function(path) { 
+    try {
+        const response = await fetch(path);
+        const json = await response.json();
+        allProducts = [];
         const { products } = json;
         allProducts = products;
         return allProducts;
-    })
-    .catch(error => console.log(error))
+    } catch (error) {
+        return console.log(error);
+    }
 };
 
 
@@ -25,6 +26,7 @@ var getProducts = function(path) {
 //output: filteredProducts
 
 //homepage sort
+
 //sort by rating (secondary sort?)
 //slice off first three and run display on new array
 
