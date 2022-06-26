@@ -1,4 +1,9 @@
-//Get form elements
+import { mobileNav } from "./nav.js";
+
+//CONTACT NAV
+mobileNav()
+
+//CONTACT FORM
 const form = document.querySelector('#contact-form');
 const firstName = document.querySelector('input[name="firstName"]');
 const lastName = document.querySelector('input[name="lastName"]');
@@ -79,6 +84,6 @@ form.addEventListener('submit', function(element) {
   const emailValidation = isValidEmail(email.value, email, emailError);
   const phoneValidation = isValidPhone(phone.value, phone, phoneError)
   if (lastNameValidation && firstNameValidation && emailValidation && phoneValidation) {
-  //Add submit function here if necessary
+  //TODO: Add submit function here (if necessary)
   }
 });

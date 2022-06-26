@@ -1,3 +1,8 @@
+//import { mobileNav } from "./nav.js";
+
+//PRODUCTS NAV
+//mobileNav()
+
 //***** PRODUCTS *****//
 const productsClient = {
     path: './products.json'
@@ -84,10 +89,10 @@ function displayProducts(filteredProducts) {
     });
 }
 
-//***** RUN ALL *****//
+//***** RUN ALL - PRODUCT SEARCH PAGE *****//
 getProducts(productsClient.path).then(function(allProducts) {
-    //FINAL: displayProducts(sortProducts(allProducts))
-    console.log(allProducts);
+    //TODO, FINAL: displayProducts(sortProducts(allProducts))
+    //console.log(allProducts);
     displayProducts(allProducts);
     displayTotal(allProducts);
 });
@@ -105,4 +110,3 @@ getProducts(productsClient.path).then(function(allProducts) {
 
 //***** PUBLIC ******//
 //export { getProducts, displayProducts }; 
-//QUESTION: why can't I use native modules?
