@@ -1,8 +1,8 @@
 import { greet } from "./TEST-MODULE.js"
 
 function greetAgain() {
-    console.log("Hello, again!")
+    console.log("Hello, again!");
 }
 
-greetAgain()
-greet()
+greetAgain();
+greet();
