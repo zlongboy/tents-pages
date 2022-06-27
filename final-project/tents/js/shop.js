@@ -7,7 +7,6 @@ mobileNav()
 //SHOP PRODUCTS
 getProducts(productsClient.path).then(function(allProducts) {
     //TODO, FINAL: displayProducts(sortProducts(allProducts))
-    //console.log(allProducts);
     displayProducts(allProducts);
     displayTotal(allProducts);
     mobileFilter();
