@@ -1,7 +1,7 @@
 import { mobileNav } from "./nav.js";
 
 //CONTACT NAV
-mobileNav()
+mobileNav();
 
 //CONTACT FORM
 const form = document.querySelector('#contact-form');
@@ -21,7 +21,7 @@ const errorMsg = {
   nameInvalid: 'Name must only contain letters and spaces.',
   emailInvalid: 'Please enter a valid email address.',
   phoneInvalid: 'Please enter a valid phone number.'
-}
+};
 
 //Helper functions
 function applyErrorStyles(input, div, msg) {
@@ -29,52 +29,52 @@ function applyErrorStyles(input, div, msg) {
   div.innerText = msg;
 }
 function removeErrorStyles(input, div) {
-  input.classList.remove('error-input')
+  input.classList.remove('error-input');
   div.innerText = '';
 }
 
 //Validation functions
 function isValidName(name, input, error) {
-  const nameRegex = /^[a-zA-Z\s]*$/
+  const nameRegex = /^[a-zA-Z\s]*$/ ; 
   if (!nameRegex.test(name)) {
-    applyErrorStyles(input, error, errorMsg.nameInvalid)
+    applyErrorStyles(input, error, errorMsg.nameInvalid);
   }
   else if (name.trim().length < 1) {
-    applyErrorStyles(input, error, errorMsg.empty)
+    applyErrorStyles(input, error, errorMsg.empty);
   } 
   else {
-    removeErrorStyles(input, error)
-    return true
-  }
-}
+    removeErrorStyles(input, error);
+    return true;
+  };
+};
 
 function isValidEmail(email, input, error) {
-    const emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
+    const emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/ ;
     if (!emailRegex.test(email)) {
-      applyErrorStyles(input, error, errorMsg.emailInvalid)
+      applyErrorStyles(input, error, errorMsg.emailInvalid);
     }
     else if (email.trim().length < 1) {
-      applyErrorStyles(input, error, errorMsg.empty)
+      applyErrorStyles(input, error, errorMsg.empty);
     } 
     else {
-      removeErrorStyles(input, error)
-      return true
+      removeErrorStyles(input, error);
+      return true;
     }
   }
 
   function isValidPhone(phone, input, error) {
-    const phoneRegex = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
+    const phoneRegex = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/ ;
     if (!phoneRegex.test(phone)) {
-      applyErrorStyles(input, error, errorMsg.phoneInvalid)
+      applyErrorStyles(input, error, errorMsg.phoneInvalid);
     }
     else if (phone.trim().length < 1) {
-      applyErrorStyles(input, error, errorMsg.empty)
+      applyErrorStyles(input, error, errorMsg.empty);
     } 
     else {
-      removeErrorStyles(input, error)
-      return true
-    }
-  }
+      removeErrorStyles(input, error);
+      return true;
+    };
+  };
 
 //Run all validation functions on submit
 form.addEventListener('submit', function(element) {
@@ -85,5 +85,5 @@ form.addEventListener('submit', function(element) {
   const phoneValidation = isValidPhone(phone.value, phone, phoneError)
   if (lastNameValidation && firstNameValidation && emailValidation && phoneValidation) {
   //TODO: Add submit function here (if necessary)
-  }
+  };
 });

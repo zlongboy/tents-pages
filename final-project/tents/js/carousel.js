@@ -1,11 +1,11 @@
-//Carousel
+//CAROUSEL
 function carousel() {
     const carouselSlides = document.querySelectorAll(".carousel-img__container");
     carouselSlides.forEach(function(carouselSlide, index) {
-        carouselSlide.style.transform = `translateX(${index*100}%)`
-    })
+        carouselSlide.style.transform = `translateX(${index*100}%)`;
+    });
 
-    //next slide
+    //NEXT SLIDE
     const nextSlide = document.querySelector(".carousel__btn--next");
     let currentSlide = 0;
 
@@ -20,7 +20,7 @@ function carousel() {
         });
     })
 
-    //prev slide
+    //PREV SLIDE
     const prevSlide = document.querySelector(".carousel__btn--prev");
     prevSlide.addEventListener('click', function() {
         if (currentSlide === 0) {

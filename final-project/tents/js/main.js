@@ -1,14 +1,14 @@
 import { carousel } from "./carousel.js";
 import { mobileNav } from "./nav.js";
-import { getProducts, displayProducts, productsClient, sortTrending } from "./products.js" 
+import { getProducts, displayProducts, productsClient, sortTrending } from "./products.js"; 
 
 //MAIN NAV
-mobileNav()
+mobileNav();
 
 //MAIN CAROUSEL
-carousel()
+carousel();
 
 //TRENDING PRODUCTS
 getProducts(productsClient.path).then(function(allProducts) {
-    displayProducts(sortTrending(allProducts))
+    displayProducts(sortTrending(allProducts));
 });

@@ -1,12 +1,12 @@
-import { mobileNav } from "./nav.js"
+import { mobileNav } from "./nav.js";
 import { getProducts, displayProducts, productsClient, mobileFilter, displayTotal } from "./products.js";
 
 //SHOP NAV
-mobileNav()
+mobileNav();
 
 //SHOP PRODUCTS
 getProducts(productsClient.path).then(function(allProducts) {
-    //TODO, FINAL: displayProducts(sortProducts(allProducts))
+    //TODO: FINAL displayProducts(sortProducts(allProducts))
     displayProducts(allProducts);
     displayTotal(allProducts);
     mobileFilter();

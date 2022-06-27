@@ -9,4 +9,4 @@ function mobileNav() {
 };
 
 // ********** PUBLIC ********** //
-export { mobileNav }
+export { mobileNav };
