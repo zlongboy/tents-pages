@@ -1,7 +1,3 @@
-//import { mobileNav } from "./nav.js";
-
-//PRODUCTS NAV
-//mobileNav()
 
 //***** PRODUCTS *****//
 const productsClient = {
@@ -12,7 +8,7 @@ const getProducts = async function(path) {
     try {
         const response = await fetch(path);
         const json = await response.json();
-        allProducts = [];
+        let allProducts = [];
         const { products } = json;
         allProducts = products;
         return allProducts;
@@ -89,24 +85,15 @@ function displayProducts(filteredProducts) {
     });
 }
 
-//***** RUN ALL - PRODUCT SEARCH PAGE *****//
-getProducts(productsClient.path).then(function(allProducts) {
-    //TODO, FINAL: displayProducts(sortProducts(allProducts))
-    //console.log(allProducts);
-    displayProducts(allProducts);
-    displayTotal(allProducts);
-});
-
-
 //***** MOBILE FILTERS *****//
-(function() {
+function mobileFilter() {
     const filtersOpen = document.querySelector('.filters__header');
     const checklist = document.querySelector('.checklist__container');
 
     filtersOpen.addEventListener('click', function() {
         checklist.classList.toggle('hide');
     });
-})();
+};
 
 //***** PUBLIC ******//
-//export { getProducts, displayProducts }; 
+export { getProducts, displayProducts, productsClient, displayTotal, mobileFilter }; 
