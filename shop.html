@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Search and compare tents to fit every camping need">
+        <title>Compare tents | ABODE</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+
+        <script defer type="module" src="js/shop.js"></script>
+    </head>
+
+    <body>
+        <article>
+            <header>
+                <!-- navbar -->
+                <nav class="nav__container nav-secondary">
+                    <a href="/index.html"><div class="logo">ABODE</div></a>
+                    <a href="#" class="nav__hamburger">
+                        <span class="hamburger__bar"></span>
+                        <span class="hamburger__bar"></span>
+                        <span class="hamburger__bar"></span>
+                    </a>
+                    <div class="nav__links">
+                        <ul>
+                            <li><a href="/shop.html">SHOP</a></li>
+                            <li><a href="/contact.html">CONTACT US</a></li>
+                            <li><a class="icon-link" href="#cart"><img src="imgs/icons/cart-thin.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <!-- all products -->
+                <section class="container">
+                    <h2 class="section-header">Search & compare</h2>
+                    <form id="products__search-form" class="nav__search products-search__bar" action="/shop.html">
+                        <img src="imgs/icons/search-thin_icon.svg" alt="">
+                        <input type="text" id="nav__search-input" placeholder="Search tents">
+                    </form>
+                </section>
+                <section class="container">
+                    <div class="results__container">
+                        <div class="filters__container">
+                            <div class=filters__header>
+                                <h3>Filters<img class="filters-icon" src="/imgs/icons/filters-icon.png" alt=""></h3>
+                            </div>
+                            <div class="results-showing"></div>
+                            <div class="checklist sort-by__container">
+                                <div><b>SORT BY</b></div>
+                                <select name="sort-by" class="sort-by__select">
+                                    <option value="sort-by">Top Rated</option>
+                                    <option value="min-price">Price: Low - High</option>
+                                    <option value="max-price">Price: High - Low</option>
+                                </select>
+                            </div>
+                            <div class="checklist__container hide">
+                                <div class="checklist">
+                                    <div><b>BRAND</b></div>
+                                    <ul>
+                                        <li><input type="checkbox" name="Kelty"/>Kelty</li>
+                                        <li><input type="checkbox" name="Marmot"/>Marmot</li>
+                                        <li><input type="checkbox" name="The North Face"/>The North Face</li>
+                                        <li><input type="checkbox" name="Quechua"/>Quechua</li>
+                                    </ul>
+                                </div>
+                                <div class="checklist">
+                                    <div><b>CAPACITY</b></div>
+                                    <ul>
+                                        <li><input type="checkbox" name="1"/>1 person</li>
+                                        <li><input type="checkbox" name="2"/>2 person</li>
+                                        <li><input type="checkbox" name="3"/>3 person</li>
+                                        <li><input type="checkbox" name="4"/>4 person</li>
+                                        <li><input type="checkbox" name="5"/>5 person</li>
+                                        <li><input type="checkbox" name="6"/>6 person</li>
+                                        <li><input type="checkbox" name="7"/>7+ person</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="products__container">
+                            <div class="product-card__container"></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <div>© 2022 ABODE. All Rights Reserved.</div>
+                <a href="#">Terms & Privacy</a>
+            </footer>    
+        </article>
+    </body>
+</html>
